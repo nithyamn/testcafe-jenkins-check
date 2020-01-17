@@ -12,5 +12,5 @@ test('My first test', async t => {
         .click(page.featureList[0].checkbox)
         .click(page.interfaceSelect)
         .click(page.interfaceSelectOption.withText('Both'))
-        .expect(page.nameInput.value).contains(process.env.BROWSERSTACK_USERNAME);
+        .expect(page.nameInput.value).contains(process.env.BROWSERSTACK_USERNAME +" "+process.env.BROWSERSTACK_ACCESS_KEY);
 });
